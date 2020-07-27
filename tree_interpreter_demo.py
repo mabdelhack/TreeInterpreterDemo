@@ -21,6 +21,10 @@ print("Feature contributions:")
 for c, feature in zip(contributions[0],
                              iris.feature_names):
     print(feature, c)
+contrib_sum = contributions[0].sum(axis=0)
+print(contrib_sum)
+contrib_sum -= contrib_sum.min()
+print((contrib_sum) / contrib_sum.sum())
 
 
 
